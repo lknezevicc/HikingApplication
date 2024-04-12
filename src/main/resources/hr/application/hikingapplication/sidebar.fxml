@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="150.0" styleClass="sidebar" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.application.hikingapplication.SidebarController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="user-box">
+         <children>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-user" iconSize="55" />
+             <Label fx:id="usernameLabel" text="leonknezevic1" textFill="WHITE">
+                 <font>
+                     <Font name="Arial Bold" size="16.0" />
+                 </font>
+             </Label>
+         </children>
+      </VBox>
+      <Button id="sidebar-button" fx:id="homeButton" mnemonicParsing="false" onAction="#homeButton" prefHeight="50.0" prefWidth="130.0" text="HOME" GridPane.rowIndex="1">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-home" iconSize="20" />
+         </graphic></Button>
+      <Button id="sidebar-button" fx:id="addRouteButton" mnemonicParsing="false" onAction="#addRouteButton" prefHeight="50.0" prefWidth="130.0" text="ADD ROUTE" GridPane.rowIndex="2">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-pencil" iconSize="18" />
+         </graphic></Button>
+      <Button id="sidebar-button" fx:id="myRoutesButton" mnemonicParsing="false" onAction="#myRoutesButton" prefHeight="50.0" prefWidth="130.0" text="MY ROUTES" GridPane.rowIndex="3">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-list" iconSize="18" />
+         </graphic></Button>
+      <Button id="logout-button" mnemonicParsing="false" onAction="#logoutButton" prefHeight="40.0" prefWidth="100.0" text="LOGOUT" GridPane.rowIndex="8">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-left" iconSize="14" />
+         </graphic></Button>
+      <Button id="sidebar-button" fx:id="routesButton" mnemonicParsing="false" onAction="#routesButton" prefHeight="50.0" prefWidth="130.0" text="ROUTES" GridPane.rowIndex="1">
+          <graphic>
+              <FontIcon iconColor="WHITE" iconLiteral="fa-list" iconSize="18" />
+          </graphic></Button>
+      <Button id="sidebar-button" fx:id="usersButton" mnemonicParsing="false" onAction="#usersButton" prefHeight="50.0" prefWidth="130.0" text="USERS" GridPane.rowIndex="2">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-address-book" iconSize="18" />
+         </graphic></Button>
+      <Button id="sidebar-button" fx:id="changeLogButton" mnemonicParsing="false" onAction="#changeLogButton" prefHeight="50.0" prefWidth="130.0" text="CHANGELOG" GridPane.rowIndex="3">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fa-file" iconSize="18" />
+         </graphic></Button>
+   </children>
+</GridPane>

@@ -1,0 +1,4 @@
+admin1=$2a$12$sXrgrOxj0/GBT9vRZBCCVe8AlHGsxqdUzFjyKYpcWMTk4Z.YejIpy
+leonknezevic1=$2a$12$rOPOdTlpPDroHZBBZ5d1T.d0PLJ.UpJFdHRmuOwqMSXPxachRnZzm
+viktor123=$2a$12$io0vWHRP2vcsq3Ie18hlNefFmgyto9RYR2JfX6EY3uAPU2vJywmp.
+NoviAdmin1=$2a$12$xqs4fKewLIfXkf/Tg6EAVeEGofmN9xCUeMCOdhoJe.gQakLJ22w/a

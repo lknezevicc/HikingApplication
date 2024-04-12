@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox prefHeight="800.0" prefWidth="1000.0" styleClass="hbox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.application.hikingapplication.DetailedRouteScreenController">
+   <children>
+       <fx:include source="sidebar.fxml" />
+      <AnchorPane prefHeight="800.0" prefWidth="850.0" styleClass="main-pane">
+         <children>
+            <StackPane layoutX="76.0" layoutY="17.0" prefHeight="390.0" prefWidth="650.0">
+               <children>
+                  <Label fx:id="routeName" text="Route name" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Arial Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="image" fitHeight="300.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <StackPane.margin>
+                        <Insets top="20.0" />
+                     </StackPane.margin></ImageView>
+                  <Label fx:id="imageDescription" text="Label" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <Label fx:id="imageGalleryState" layoutX="313.0" layoutY="209.0" text="No images of this route in gallery.">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="leftButton" layoutX="26.0" layoutY="204.0" mnemonicParsing="false" onAction="#leftButtonAction">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-left" iconSize="20" />
+               </graphic></Button>
+            <Button fx:id="rightButton" layoutX="753.0" layoutY="204.0" mnemonicParsing="false" onAction="#rightButtonAction">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-right" iconSize="20" />
+               </graphic></Button>
+            <Label layoutX="425.0" layoutY="435.0" text="Description">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="description" editable="false" layoutX="425.0" layoutY="462.0" prefHeight="300.0" prefWidth="380.0" />
+            <GridPane layoutX="31.0" layoutY="462.0" prefHeight="290.0" prefWidth="330.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="114.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="216.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Mountain peak:">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Starting point:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Ending point:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Duration:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Length:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Difficulty:" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Author:" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Arial Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mountainPeak" text="Mountain peak" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="startingPoint" text="Starting point" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="endingPoint" text="Ending point" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="duration" text="Duration" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="length" text="Length" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="difficulty" text="Difficulty" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="author" text="Author" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Arial Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

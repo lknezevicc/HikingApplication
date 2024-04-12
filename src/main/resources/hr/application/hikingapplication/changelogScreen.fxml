@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="800.0" prefWidth="1000.0" styleClass="hbox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.application.hikingapplication.ChangelogScreenController">
+    <children>
+        <fx:include source="sidebar.fxml" />
+      <AnchorPane prefHeight="800.0" prefWidth="850.0" styleClass="main-pane">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" layoutX="27.0" layoutY="20.0" prefHeight="41.0" prefWidth="750.0" spacing="70.0">
+               <children>
+                  <Label text="Object name">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Old value">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="New value">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Timestamp">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="User role">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="changesListView" layoutX="40.0" layoutY="66.0" prefHeight="558.0" prefWidth="750.0" />
+            <Button fx:id="exportButton" layoutX="335.0" layoutY="680.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" text="EXPORT" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

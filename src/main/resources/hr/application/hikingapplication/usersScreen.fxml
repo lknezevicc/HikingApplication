@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="800.0" prefWidth="1000.0" styleClass="hbox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.application.hikingapplication.UsersController">
+    <children>
+        <fx:include source="sidebar.fxml" />
+      <AnchorPane prefHeight="800.0" prefWidth="850.0" styleClass="main-pane">
+         <children>
+            <Label layoutX="23.0" layoutY="39.0" text="Find an user:">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchField" layoutX="134.0" layoutY="36.0" prefHeight="26.0" prefWidth="183.0" promptText="search by username" styleClass="field" />
+            <TableView fx:id="usersTable" layoutX="20.0" layoutY="90.0" prefHeight="670.0" prefWidth="417.0">
+               <columns>
+                  <TableColumn fx:id="userIDColumn" maxWidth="80.0" resizable="false" text="ID" />
+                  <TableColumn fx:id="usernameColumn" maxWidth="218.0" prefWidth="209.0" resizable="false" text="Username" />
+                  <TableColumn fx:id="userRoleColumn" maxWidth="127.0" prefWidth="127.0" resizable="false" text="User Role" />
+               </columns>
+            </TableView>
+            <GridPane layoutX="480.0" layoutY="135.0" prefHeight="300.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Username:" />
+                  <Label text="Password:" GridPane.rowIndex="2" />
+                  <Label text="Confirm password:" GridPane.rowIndex="4" />
+                  <TextField fx:id="usernameField" prefWidth="200.0" styleClass="field" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordField" prefWidth="200.0" styleClass="field" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="confirmPasswordField" prefWidth="200.0" styleClass="field" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button id="delete-button" fx:id="deleteUserButton" layoutX="638.0" layoutY="571.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="50.0" prefWidth="160.0" text="DELETE" />
+            <Button fx:id="setRoleButton" layoutX="462.0" layoutY="571.0" mnemonicParsing="false" onAction="#setRole" prefHeight="50.0" prefWidth="160.0" style="-fx-font-size: 14;" text="SET ADMIN ROLE" />
+            <Button fx:id="createUserButton" layoutX="550.0" layoutY="445.0" mnemonicParsing="false" onAction="#createUser" prefHeight="50.0" prefWidth="160.0" style="-fx-font-size: 14;" text="CREATE NEW USER" />
+            <ComboBox fx:id="filterComboBox" layoutX="337.0" layoutY="36.0" prefHeight="26.0" prefWidth="100.0" promptText="Filter by:" styleClass="combo-box" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
